@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio de Pedro Vilares</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- BootStrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/ProjectPROGWEB/style.css" />
+    <!-- Custom JS -->
+    <script src="/ProjectPROGWEB/script.js" defer></script>
+  </head>
+
+  <body id="body">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Pedro Vilares - Projecto PROGWEB</a>
+        <div class="ms-auto">
+          <button class="btn btn-light btn-sm" id="btnTema">
+            <i class="bi bi-moon-stars-fill"></i> Dark Mode
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PROFILE -->
+    <div class="container mt-4">
+      <div class="row">
+        <!-- PROFILE CARD LEFT -->
+        <div class="col-md-4">
+          <div class="card text-center p-3" id="cartaoPerfil">
+            <img
+              id="fotoPerfil"
+              src="/ProjectPROGWEB/Photos/Pedro_Vilares.jpg"
+              alt="Foto de Pedro Vilares"
+              class="rounded-circle mx-auto d-block mb-3"
+              width="120"
+              height="120"
+            />
+
+            <h4 id="nomePerfil">Pedro Vilares</h4>
+            <p id="frasePerfil" class="text">
+              Data Analyst & Low-Code Developer Student
+            </p>
+
+            <!-- Change Image Button -->
+            <button class="btn btn-primary mb-2 w-100" id="btnTrocarImagem">
+              <i class="bi bi-camera"></i> Change Image
+            </button>
+
+            <!-- New Hobby Button -->
+            <button class="btn btn-primary mb-2 w-100" id="btnAdicionarHobby">
+              <i class="bi bi-plus-circle"></i> Add New Hobby
+            </button>
+
+            <!-- Random Color Button -->
+            <button class="btn btn-secondary mb-2 w-100" id="btnCorAleatoria">
+              <i class="bi bi-palette"></i> Random Color
+            </button>
+
+            <!-- Reset Button -->
+            <button class="btn btn-danger w-100" id="btnReset">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset
+            </button>
+
+            <p class="small text mb-0">
+              Updated profile <span id="contadorAtualizacoes">0</span> time(s)
+            </p>
+          </div>
+        </div>
+
+        <!-- PROFILE CARD RIGHT -->
+        <div class="col-md-8">
+          <!-- Sobre mim -->
+          <div class="card p-3 mb-3">
+            <h3>About Me</h3>
+            <p>
+              Hello. My name is <strong>Pedro Vilares</strong>. Data Analyst
+              transitioning from environmental research and senior brewing
+              roles. I have pratical experience in
+              <strong
+                >Python, SQL, Business Intelligence (PowerBI), Airflow and
+                dbt</strong
+              >.Proven ability in data analysis, manipulation, and extraction.
+              Strong foundation in environmental science coupled with a
+              data-driven approach to contribute to informed decision-making.
+              Currently (2026) pursuing a pratical course as a
+              <strong>Low-Code Developer with Outsystems</strong>.
+            </p>
+            <br />
+
+            <!-- PERSONAL PROJECTS -->
+            <h5>Some Personal Projects</h5>
+            <div class="d-flex gap-3 mt-2 flex-wrap">
+              <div class="text-center">
+                <img
+                  src="/ProjectPROGWEB/Photos/Agedashi.jpeg"
+                  alt="Agedashi Tofu"
+                  class="rounded"
+                  width="120"
+                  height="120"
+                />
+                <p class="small mt-1">Private Dinner</p>
+              </div>
+              <div class="text-center">
+                <img
+                  src="/ProjectPROGWEB/Photos/Ramen 4.jfif"
+                  alt="Shoyu Ramen"
+                  class="rounded"
+                  width="120"
+                  height="120"
+                />
+                <p class="small mt-1">Pop-Up Kitchen<br />Radro</p>
+              </div>
+              <div class="text-center">
+                <img
+                  src="/ProjectPROGWEB/Photos/GatobuchaFinalMontePio.jpg"
+                  alt="Gatobucha"
+                  class="rounded"
+                  width="120"
+                  height="120"
+                />
+                <p class="small mt-1">Gatobucha<br />Kombucha</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PORTFOLIO FORM -->
+          <div class="card p-3" id="form">
+            <h4>Profile Update</h4>
+
+            <div class="mb-2">
+              <label class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputNome"
+                placeholder="Your name..."
+              />
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Greeting</label>
+              <textarea
+                class="form-control"
+                id="inputFrase"
+                rows="2"
+                placeholder="Write something about you..."
+              ></textarea>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Favourite Color</label>
+              <input
+                type="color"
+                class="form-control form-control-color"
+                id="inputCor"
+                value="#0d6efd"
+              />
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Photo (URL)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputFoto"
+                placeholder="https://..."
+              />
+            </div>
+
+            <button class="btn btn-success w-100 mt-1" id="btnAtualizarPerfil">
+              Update Portfolio
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOBBIES -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="card p-3" id="secaoHobbies">
+          <h3>My Hobbies</h3>
+          <ul id="listaHobbies">
+            <li><i class="bi bi-egg-fried"></i> Cooking</li>
+            <li><i class="bi bi-puzzle"></i> Chess</li>
+            <li><i class="bi bi-controller"></i> Gamming (PC)</li>
+            <li><i class="bi bi-book"></i> Reading</li>
+            <li><i class="bi bi-film"></i> Movies/Shows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- API -->
+    <div class="container mt-4">
+      <div class="card p-3 text-center">
+        <h3>Chuck Norris (RIP) Jokes</h3>
+        <p class="text-muted">Click the button to get a Chuck Norris joke</p>
+
+        <div
+          id="caixaCitacao"
+          class="alert alert-info mt-2"
+          style="display: none"
+        >
+          <p id="textoCitacao" class="mb-1 fst-italic"></p>
+          <strong id="autorCitacao"></strong>
+        </div>
+
+        <button class="btn btn-primary mt-2" id="btnCarregarCitacao">
+          <i class="bi bi-chat-quote"></i> Tell me a joke
+        </button>
+      </div>
+    </div>
+
+    <!-- FAVOURITE LINKS -->
+    <div class="container mt-4 mb-5">
+      <div class="card p-3">
+        <h3>Favourite Links</h3>
+        <ul>
+          <li>
+            <a href="https://www.crunchyroll.com/" target="_blank"
+              >Crunchyroll</a
+            >
+            – Streaming de animes
+          </li>
+          <li>
+            <a href="https://www.theguardian.com/europe" target="_blank"
+              >The Guardian</a
+            >
+            – British news
+          </li>
+          <li>
+            <a href="https://www.datacamp.com/" target="_blank">DataCamp</a> –
+            Online learning platform for data science
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+      <p class="mb-0 text">
+        © 2026 Pedro Vilares · Programação Web · CESAE Digital
+      </p>
+      <a href="#body" class="btn btn btn-outline-secondary mt-2"
+        ><i class="bi bi-arrow-up-circle-fill"></i> Top</a
+      >
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
