@@ -191,7 +191,7 @@ let btnReset = document.getElementById("btnReset").addEventListener("click", fun
   document.getElementById("nomePerfil").innerText = "Pedro Vilares"; // Reseting name
   document.getElementById("frasePerfil").innerText = "Data Analyst & Low-Code Developer Student"; // Reseting phrase
   document.getElementById("cartaoPerfil").style.backgroundColor = ""; // Reseting background color
-  document.getElementById("fotoPerfil").src = "/ProjectPROGWEB/Photos/Pedro_Vilares.jpg"; // Reseting profile photo to inicial photo
+  document.getElementById("fotoPerfil").src = "Photos/Pedro_Vilares.jpg"; // Reseting profile photo to inicial photo
 
   // Reseting form
   document.getElementById("inputNome").value  = ""; // Reseting inputs (Name)
